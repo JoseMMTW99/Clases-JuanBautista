@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    
+    <title>Consola</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./1-Javascript.html">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./2-Consola.html">Consola</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./3-Comentarios.html">Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./4-Var.html">Var</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./5-Let.html">Let</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./6-Const.html">Const</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container mt-5">
+        <h1 class="mb-4">¿Qué es la Consola y Para Qué Sirve?</h1>
+
+        <!-- Introducción -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="card-text">
+                    La consola es una herramienta esencial para los desarrolladores. Nos permite ver información sobre el código en ejecución, errores y resultados sin afectar la interfaz de usuario.
+                </p>
+                <p class="card-text">
+                    Para abrir la consola en tu navegador:
+                </p>
+                <ul>
+                    <li>En Chrome o Firefox: Haz clic derecho en la página y selecciona "Inspeccionar", luego ve a la pestaña "Consola".</li>
+                    <li>También puedes presionar <kbd>F12</kbd> o <kbd>Ctrl+Shift+I</kbd> (o <kbd>Cmd+Option+I</kbd> en Mac) para abrir directamente las herramientas de desarrollo.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Mostrar Mensajes -->
+        <div class="card mb-4">
+            <div class="card-header">
+                1. Mostrar Mensajes en la Consola
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Usamos <code>console.log()</code> para mostrar mensajes o resultados en la consola. Esto es útil para depurar y verificar el comportamiento de nuestro código.
+                </p>
+                <pre><code class="language-javascript">console.log("Hola, esto es un mensaje en la consola."); // Muestra un mensaje de texto en la consola
+let numero = 42;
+console.log("El valor de la variable 'numero' es:", numero); // Muestra el valor de una variable en la consola</code></pre>
+                <p class="card-text">
+                    Recuerda, los mensajes en la consola no se muestran en la página web, solo en las herramientas de desarrollo del navegador.
+                </p>
+            </div>
+        </div>
+
+        <!-- Errores en la Consola -->
+        <div class="card mb-4">
+            <div class="card-header">
+                2. Errores en la Consola
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Cuando hay un error en el código, JavaScript lo mostrará en la consola. Esto nos ayuda a identificar y solucionar problemas en nuestro código.
+                </p>
+                <pre><code class="language-javascript">console.log(mensajeQueNoExiste); // Esto dará un error, ya que 'mensajeQueNoExiste' no está definida</code></pre>
+                <p class="card-text">
+                    El error se verá algo así en la consola: <code>"Uncaught ReferenceError: mensajeQueNoExiste is not defined"</code>. Esto indica que estamos tratando de usar algo que JavaScript no reconoce.
+                </p>
+            </div>
+        </div>
+
+        <!-- Otros Comandos -->
+        <div class="card mb-4">
+            <div class="card-header">
+                3. Otros Comandos de Consola
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Además de <code>console.log()</code>, hay otros comandos útiles:
+                </p>
+                <ul>
+                    <li><code>console.error()</code>: Muestra errores en rojo.</li>
+                    <li><code>console.warn()</code>: Muestra advertencias en amarillo.</li>
+                    <li><code>console.table()</code>: Muestra datos en forma de tabla.</li>
+                </ul>
+                <pre><code class="language-javascript">console.error("Este es un mensaje de error"); // Muestra un error en la consola
+console.warn("Este es un mensaje de advertencia"); // Muestra una advertencia en la consola
+
+let personas = [
+  { nombre: "Juan", edad: 14 },
+  { nombre: "Ana", edad: 13 },
+  { nombre: "Luis", edad: 15 }
+];
+
+console.table(personas); // Muestra los datos en una tabla en la consola</code></pre>
+            </div>
+        </div>
+
+        <!-- Conclusión -->
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    La consola es una herramienta indispensable para los desarrolladores. Nos permite verificar el funcionamiento del código, ver resultados y encontrar errores sin afectar la vista del usuario en la página web.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5 mt-auto">
+    </footer>
+
+    <!-- Prism.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script de la Clase -->
+    <script src="../js/2-Consola.js"></script>
+</body>
+</html>

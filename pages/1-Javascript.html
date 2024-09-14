@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <!-- Prism.js CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    
+    <title>Introducción a JavaScript</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./1-Javascript.html">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./2-Consola.html">Consola</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./3-Comentarios.html">Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./4-Var.html">Var</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./5-Let.html">Let</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./6-Const.html">Const</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Introducción a JavaScript</h1>
+
+        <!-- Tarjeta con información -->
+        <div class="card shadow-sm mb-5">
+            <div class="card-body">
+                <h5 class="card-title">¿Qué aprenderás?</h5>
+                <p class="card-text">
+                    En esta sección, vamos a repasar los conceptos básicos de JavaScript. Si eres principiante o quieres reforzar tus conocimientos, aquí encontrarás:
+                </p>
+                <ul>
+                    <li><strong>Variables:</strong> Cómo declarar y utilizar variables con <code>var</code>, <code>let</code>, y <code>const</code>.</li>
+                    <li><strong>Tipos de Datos:</strong> Aprende sobre los diferentes tipos de datos en JavaScript como números, cadenas de texto y booleanos.</li>
+                    <li><strong>Operaciones Básicas:</strong> Realiza operaciones matemáticas simples con los operadores de suma, resta, multiplicación y división.</li>
+                    <li><strong>Comentarios:</strong> Cómo agregar comentarios en tu código para hacerlo más legible y organizado.</li>
+                    <li><strong>Console.log:</strong> Muestra mensajes en la consola del navegador para depurar y revisar tu código.</li>
+                </ul>
+                <p class="card-text">Explora más en las secciones de la navegación.</p>
+            </div>
+        </div>
+
+        <!-- Ejemplo de código con Prism.js -->
+        <div class="card">
+            <div class="card-header">
+                Ejemplo de Código
+            </div>
+            <div class="card-body">
+                <pre><code class="language-javascript">
+// Ejemplo básico de JavaScript:
+
+let nombre = "Juan";
+const edad = 14;
+let suma = 5 + 3;
+
+console.log("El nombre del usuario es:", nombre);
+console.log("La suma de 5 + 3 es:", suma);
+                </code></pre>
+                <p class="card-text">Este ejemplo muestra cómo declarar variables y realizar operaciones básicas en JavaScript.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5 mt-auto">
+    </footer>
+
+    <!-- Prism.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script de la Clase -->
+    <script src="../js/1-Javascript.js"></script>
+</body>
+</html>

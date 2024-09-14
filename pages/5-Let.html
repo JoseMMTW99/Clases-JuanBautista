@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet">
+    <title>Entendiendo "let" en JavaScript</title>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="../index.html">Inicio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="./1-Javascript.html">JavaScript</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./2-Consola.html">Consola</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./3-Comentarios.html">Comentarios</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./4-Var.html">Var</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="./5-Let.html">Let</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./6-Const.html">Const</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenido Principal -->
+    <div class="container mt-5">
+        <h1 class="mb-4">Entendiendo "let" en JavaScript</h1>
+
+        <!-- Introducción -->
+        <div class="card mb-4">
+            <div class="card-body">
+                <p class="card-text">
+                    La palabra clave <code>let</code> es una forma más moderna de declarar variables en JavaScript. 
+                    Introducida en ES6, <code>let</code> tiene un comportamiento diferente a <code>var</code>, 
+                    solucionando algunos de sus problemas.
+                </p>
+            </div>
+        </div>
+
+        <!-- Declaración y reasignación con let -->
+        <div class="card mb-4">
+            <div class="card-header">
+                1. Declarar y Reasignar Variables con <code>let</code>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Al igual que <code>var</code>, puedes declarar y reasignar variables usando <code>let</code>.
+                </p>
+                <pre><code class="language-javascript">let nombre = "María";
+console.log(nombre); // "María"
+
+nombre = "Pedro";
+console.log(nombre); // "Pedro"</code></pre>
+            </div>
+        </div>
+
+        <!-- Alcance de let -->
+        <div class="card mb-4">
+            <div class="card-header">
+                2. Alcance de <code>let</code>
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    A diferencia de <code>var</code>, <code>let</code> tiene alcance de bloque, 
+                    es decir, solo existe dentro de las llaves donde es declarado.
+                </p>
+                <pre><code class="language-javascript">if (true) {
+  let mensaje = "Dentro del bloque";
+  console.log(mensaje); // "Dentro del bloque"
+}
+
+// console.log(mensaje); // Error: mensaje no está definido</code></pre>
+            </div>
+        </div>
+
+        <!-- Hoisting -->
+        <div class="card mb-4">
+            <div class="card-header">
+                3. Hoisting (Elevación)
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Aunque <code>let</code> también es "elevado", no puedes usar la variable antes de su declaración.
+                    Esto es diferente de <code>var</code>.
+                </p>
+                <pre><code class="language-javascript">console.log(saludo); // Error: no se puede acceder a 'saludo'
+let saludo = "Hola";</code></pre>
+            </div>
+        </div>
+
+        <!-- Uso de let en bucles -->
+        <div class="card mb-4">
+            <div class="card-header">
+                4. Uso de <code>let</code> en bucles
+            </div>
+            <div class="card-body">
+                <p class="card-text">
+                    Las variables declaradas con <code>let</code> en bucles tienen un nuevo valor en cada iteración, 
+                    lo que evita errores comunes con <code>var</code>.
+                </p>
+                <pre><code class="language-javascript">for (let i = 0; i < 3; i++) {
+  console.log(i); // 0, 1, 2
+}
+
+// console.log(i); // Error: i no está definido fuera del bucle</code></pre>
+            </div>
+        </div>
+
+        <!-- Conclusión -->
+        <div class="card">
+            <div class="card-body">
+                <p class="card-text">
+                    En resumen, <code>let</code> es más seguro y predecible que <code>var</code>. 
+                    Es preferible usar <code>let</code> en lugar de <code>var</code> para evitar problemas de alcance y hoisting.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-light py-5 mt-auto">
+    </footer>
+
+    <!-- Prism.js JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <!-- Script de la Clase -->
+    <script src="../js/5-Let.js"></script>
+</body>
+</html>
